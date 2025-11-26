@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: n8n              # nombre legible; puedes cambiarlo
+    env: docker
+    plan: starter
+    autoDeploy: true
+    envVars:
+      - key: N8N_PORT
+        value: "5678"
+      - key: N8N_PROTOCOL
+        value: "https"
+      - key: WEBHOOK_URL
+        value: "https://YOUR-SERVICE.onrender.com/"  # <-- placeholder
+      - key: GENERIC_TIMEZONE
+        value: "Europe/Madrid"
